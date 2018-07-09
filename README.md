@@ -19,10 +19,10 @@ First you'll want to require jstoxml in your script, and assign the result to th
 
 ```javascript
 // Node
-const { toXML } = require('jstoxml');
+const { toXML } = require('jstoxmlparser');
 
 // Browser
-import { toXML } from 'jstoxml';
+import { toXML } from 'jstoxmlparser';
 ```
 
 #### Example 1: Simple object
