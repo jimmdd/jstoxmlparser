@@ -1,35 +1,18 @@
-jstoxml
+jstoxmlparser
 =========
-[![Build Status](https://travis-ci.org/davidcalhoun/jstoxml.svg?branch=master)](https://travis-ci.org/davidcalhoun/jstoxml)
 [![Downloads][downloads-image]][npm-url]
 
 ### Convert JavaScript objects (and JSON) to XML (for RSS, Podcasts, etc.)
 
 Everyone loves JSON, and more and more folks want to move that direction, but we still need things outputted in XML!  Particularly for [RSS feeds](http://www.rssboard.org/rss-specification) and [Podcasts](http://www.apple.com/itunes/podcasts/specs.html).
 
-This is inspired by [node-jsontoxml](https://github.com/soldair/node-jsontoxml), which was found to be a bit too rough around the edges.  jstoxml attempts to fix that by being more flexible.
+This is inspired by [jstoxml](https://github.com/soldair/node-jsontoxml), which was found to be a bit too rough around the edges.  jstoxml attempts to fix that by being more flexible.
 
 ### Installation
-* npm install jstoxml
-
-### Changelog
-
-#### Version 1.3.0
-* restored `default` module export (#31)
-
-#### Version 1.2.0
-* refactoring and cleanup
-
-#### Version 1.1.0
-* Added support for attribute filtering (see Example 11b below).
+* npm install jstoxmlparser
 
 #### Version 1.0.0
-* Complete rewrite!  The code should now be easier to understand and maintain.
-* now supports emoji/UTF8 tag attributes (needed for AMP pages - e.g. `<html ⚡ lang="en">`) (see example 14)
-* now supports duplicate attribute key names (see example 15)
-* Fixed: functions returning objects now have now that output passed through toXML for XML conversion
-* Fixed: empty text strings now properly output self-closing tags
-* Migrated tests to mocha
+* first version to change behavior in jstoxml and now can be used to convert existing json with array of objects.
 
 ### Examples
 First you'll want to require jstoxml in your script, and assign the result to the namespace variable you want to use (in this case jstoxml):
@@ -73,6 +56,23 @@ Output:
 
 ```
 <foo>bar</foo><foo>bar2</foo>
+```
+#### Example 2-1: object array
+```javascript
+toXML({
+  a:[
+  {
+    foo: 'bar'
+  },
+  {
+    foo: 'bar2'
+  }
+]});
+```
+Output:
+
+```
+<a><foo>bar</foo></a><a><foo>bar2</foo></a>
 ```
 
 #### Example 3: Simple functions
