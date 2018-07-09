@@ -169,6 +169,19 @@ describe('toXML', () => {
 </foo>`;
       assert.equal(result, expectedResult);
     });
+
+    it('object contain array of objects', () => {
+      const val = {
+        a:[
+        { foo: 'bar' },
+        { foo: 'baz' },
+        { foo2: 'bar2' }
+      ]
+    };
+      const result = toXML(val);
+      const expectedResult = '<a><foo>bar</foo></a><a><foo>baz</foo></a><a><foo2>bar2</foo2></a>';
+      assert.equal(result, expectedResult);
+    });
   });
 
   describe('special-objects', () => {
