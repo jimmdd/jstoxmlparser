@@ -4,7 +4,7 @@ jstoxmlparser
 
 Everyone loves JSON, and more and more folks want to move that direction, but we still need things outputted in XML!  Particularly for [RSS feeds](http://www.rssboard.org/rss-specification) and [Podcasts](http://www.apple.com/itunes/podcasts/specs.html).
 
-This is inspired by David's[jstoxml](https://github.com/davidcalhoun/jstoxml), which performed a behavior that won't fit into my project. So I took on David's jstoxml and modified it to suit on my purpose. If you looking for complete and more stable version, please go to David's page. I'll update this readme once I finish develop my own version. Now the only difference between jstoxmlparser and jstoxml is the behavior handle object that contains array of objects. See jstoxml issue 33 and 34 for reference.
+This is inspired by David's [jstoxml](https://github.com/davidcalhoun/jstoxml), which performed a behavior that won't fit into my project. So I took on David's jstoxml and modified it to suit on my purpose. If you looking for complete and more stable version, please go to David's page. I'll update this readme once I finish develop my own version. Now the only difference between jstoxmlparser and jstoxml is the behavior handle object that contains array of objects. See jstoxml issue 33 and 34 for reference.
 
 ### Installation
 * npm install jstoxmlparser
